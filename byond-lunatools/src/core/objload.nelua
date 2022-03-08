@@ -1,0 +1,10 @@
+## if WIN32 then
+	local obj_s = require("win32.objload")
+## else
+	local obj_s = require("posix.objload")
+## end
+
+local obj = @record {
+	dlobj : obj_s
+
+}

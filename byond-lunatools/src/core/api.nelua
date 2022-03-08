@@ -1,0 +1,18 @@
+global byond_instance <codename "BYOND"> = @record {
+
+}
+
+global lunatools_module <codename "lunatools_module"> = @record {
+	open : function(byond_instance),
+	close : function(byond_instance),
+	path : cstring,
+	deps : *[0]cstring
+}
+
+function lunatools_module:__tostring()
+	return self.path
+end
+
+local l : lunatools_module = {
+	path = "test"
+}
